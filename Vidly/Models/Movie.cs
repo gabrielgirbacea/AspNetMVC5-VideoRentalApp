@@ -8,11 +8,13 @@ namespace Vidly.Models
         public int Id { get; set; }
 
         [Required]
+        [StringLength(255)]
         public string Name { get; set; }
 
         [Required]
         [Display(Name = "Number In Stock")]
-        public int NumberInStock{ get; set; }
+        [Range(1, 20)]
+        public int NumberInStock { get; set; }
 
         [Required]
         [Display(Name = "Release Date")]
